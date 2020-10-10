@@ -9,6 +9,12 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
+# Use Uglifier as compressor for Javascript assets
+gem 'uglifier'
+# Ude CoffeeScript for .coffee assets and views
+gem 'coffee-rails'
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 4.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -29,13 +35,16 @@ gem 'bootstrap', '~> 4.5.2'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'devise', '~> 4.7.3'
-gem 'listen'
 
 group :development do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
+  gem 'listen'
+  # Spring speeds up development by keeping your application
+  gem 'spring'
+  gem 'spring-watcher-listen'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.4'
   gem 'wdm', '>= 0.1.0'
