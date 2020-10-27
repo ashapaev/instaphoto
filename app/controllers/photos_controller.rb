@@ -38,7 +38,7 @@ class PhotosController < ApplicationController
 
   def destroy
     @photo.destroy
-      redirect_to photos_url, notice: 'Photo was successfully destroyed.'
+    redirect_to photos_url, notice: 'Photo was successfully destroyed.'
   end
 
   private
@@ -53,6 +53,6 @@ class PhotosController < ApplicationController
     end
 
     def photo_params
-      params.require(:photo).permit(:description)
+      params.require(:photo).permit(:description, :image)
     end
 end
